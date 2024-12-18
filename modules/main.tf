@@ -12,3 +12,13 @@ data "external" "local_exec" {
 output "external_local_exec_output" {
   value = data.external.local_exec.result
 }
+
+# in case you are getting problems exfiltrating sensitive data
+variable "name" {
+  description = "The sensitive value to make nonsensitive"
+  type        = string
+}
+
+output "result" {
+  value = nonsensitive(var.name)
+}
