@@ -16,5 +16,5 @@ output "external_local_exec_output" {
 # in case you are getting problems exfiltrating sensitive data
 
 output "result" {
-  value = nonsensitive(var.name)
+  value = nonsensitive(var.value)
 }
